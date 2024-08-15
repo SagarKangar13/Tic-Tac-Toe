@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #b2d7ff 0%, #ffdfd5 100%);
+    height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+    color: #4a90e2;
+    text-shadow: 2px 2px #fff;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+    color: #e94e77;
+    text-shadow: 1px 1px #fff;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #50c878;
+    text-shadow: 1px 1px #fff;
+}
+
+.container{
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+}
+
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60vmin;
+    height: 60vmin;
+    gap: 1.5vmin;
+}
+
+.box{
+    flex-basis: 30%; /* Each box takes 30% of the width in the grid */
+    height: 18vmin;
+    border: none;
+    box-shadow: 0rem 0.25rem 0.5rem rgb(0, 0, 0, 0.2);
+    border-radius: 50%;
+    font-size: 3rem;
+    color: #d95980;
+    text-shadow: 1px 1px #fff;
+    background-color: #819ff9a1;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:active {
+    transform: scale(0.9);
+}
+
+#reset-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #63aac0;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.3);
+    transition: all 150ms ease-in-out;
+}
+
+#reset-btn:hover{
+    transform: scale(1.03);
+}
+
+#new-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #63aac0;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.3);
+    transition: all 150ms ease-in-out;
+}
+
+#new-btn:hover{
+    transform: scale(1.03);
+}
+
+.msg-container{
+    height: 100vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.hide{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .game {
+        width: 90vmin; /* Increase the width for smaller screens to fit the grid */
+        height: 90vmin;
+    }
+
+    .box {
+        flex-basis: 30%; /* Ensure boxes stay in a 3x3 grid */
+        height: 12vmin;   /* Reduce the height for smaller screens */
+        font-size: 2rem;  /* Adjust font size for smaller screens */
+    }
+}
